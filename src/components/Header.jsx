@@ -9,19 +9,19 @@ function Header() {
       <img src={mash} alt='girl with gray hair logo' className='headImage' />
       <button className='headButton'>
         Tier List
-        <img src={gem} alt='girl with gray hair logo' className='secret' />
+        <img src={gem} alt='gem' className='secret' />
       </button>
       <button className='headButton'>
         Servants
-        <img src={gem} alt='girl with gray hair logo' className='secret' />
+        <img src={gem} alt='gem' className='secret' />
       </button>
       <button className='headButton'>
         Simulator
-        <img src={gem} alt='girl with gray hair logo' className='secret' />
+        <img src={gem} alt='gem' className='secret' />
       </button>
       <button className='headButton'>
         Banners
-        <img src={gem} alt='girl with gray hair logo' className='secret' />
+        <img src={gem} alt='gem' className='secret' />
       </button>
     </header>
   );

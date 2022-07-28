@@ -1,22 +1,23 @@
 
 import React from 'react';
-import '../styles/components/header.sass';
-import mash from '../images/FGO_icon.webp';
-import gem from '../images/gem.png';
+import '../styles/components/footer.sass';
+import fateLogo from '../images/fateLogo.png'
 
-const lala =
-  'https://www.kindpng.com/picc/m/260-2608908_fate-grand-order-logo-hd-png-download.png';
-  
-function Header() {
+function Footer() {
   return (
-    <footer className='headContainer'>
-      <img src={mash} alt='girl with gray hair logo' className='headImage' />
-      <button className='headButton'>
-        Tier List
-        <img src={gem} alt='girl with gray hair logo' className='secret' />
-      </button>
+    <footer className='footContainer'>
+      <img
+        src={fateLogo}
+        alt='logo of Fate Grand Order'
+        className='footImage'
+      />
+      <p className='fooText'>
+        Made by Lilith Gouveia, a fan of the franchise, this is a non-profit project, powered by the api
+        of the amazing AtlasAcademy.
+      </p>
+      <br />
     </footer>
   );
 }
 
-export default Header;
+export default Footer;
