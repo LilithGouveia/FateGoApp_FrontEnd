@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/components/header.sass';
-import mash from '../images/FGO_icon.webp'
-import gem from '../images/gem.png'
+import mash from '../assets/FGO_icon.webp'
+import gem from '../assets/gem.png'
 
 function Header() {
   return (

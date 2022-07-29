@@ -1,5 +1,5 @@
 import React from 'react';
-import gudako from '../../images/Gudako.webp'
+import gudako from '../../assets/Gudako.webp'
 import '../../styles/components/messages.sass';
 
 function Loading() {

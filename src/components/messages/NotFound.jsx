@@ -1,6 +1,6 @@
 import React from 'react';
-import gilga from '../../images/gilga1april.png';
-import atal from '../../images/atalante1april.png';
+import gilga from '../../assets/gilga1april.png';
+import atal from '../../assets/atalante1april.png';
 import '../../styles/components/messages.sass'
 
 function NotFound() {

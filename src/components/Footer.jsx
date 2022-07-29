@@ -1,7 +1,7 @@
 
 import React from 'react';
 import '../styles/components/footer.sass';
-import fateLogo from '../images/fateLogo.png'
+import fateLogo from '../assets/fateLogo.png'
 
 function Footer() {
   return (
