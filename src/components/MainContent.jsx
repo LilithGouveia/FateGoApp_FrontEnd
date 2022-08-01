@@ -7,7 +7,8 @@ function MainContent() {
   return (
     <div className='mainContent'>
       <Header />
-      <Footer />
+
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -5,10 +5,18 @@ import context from './context';
 
 function Provider({ children }) {
   const [inputName, setInputName] = useState('');
+  const [inputBanner, setInputBanner] = useState('');
+
+  // o input encontrará informações sobre personagens e sobre o banner.
+  //tier list
+  // banners
+  //lore?
 
   const value = {
     inputName,
     setInputName,
+    inputBanner,
+    setInputBanner,
   };
 
   return (

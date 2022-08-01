@@ -6,23 +6,29 @@ import gem from '../assets/gem.png'
 function Header() {
   return (
     <header className='headContainer'>
-      <img src={mash} alt='girl with gray hair logo' className='headImage' />
-      <button className='headButton'>
-        Tier List
-        <img src={gem} alt='gem' className='secret' />
-      </button>
-      <button className='headButton'>
-        Servants
-        <img src={gem} alt='gem' className='secret' />
-      </button>
-      <button className='headButton'>
-        Simulator
-        <img src={gem} alt='gem' className='secret' />
-      </button>
-      <button className='headButton'>
-        Banners
-        <img src={gem} alt='gem' className='secret' />
-      </button>
+      <div className='headers'>
+        <img src={mash} alt='girl with gray hair logo' className='headImage' />
+        <img
+          src='https://anime.fate-go.us/ep7-tv/tv/assets/img/logo.png'
+          alt='logo of fate grand order'
+          className='logo'
+        />
+      </div>
+      <div className='menu'>
+        <button className='headButton'>Tier List</button>
+        <button className='headButton'>Servants</button>
+        <button className='headButton'>Banners</button>
+      </div>
+      <form action='/' method='GET' className='form'>
+        <input type='search' placeholder='Search' className='search-field' />
+        <button type='submit' class='search-button'>
+          <img
+            src='https://cdn.icon-icons.com/icons2/1111/PNG/512/loupe_79257.png'
+            alt='magnifier'
+            className='sea'
+          />
+        </button>
+      </form>
     </header>
   );
 }
