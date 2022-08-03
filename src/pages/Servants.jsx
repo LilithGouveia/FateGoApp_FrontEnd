@@ -6,7 +6,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Notfound from '../components/messages/NotFound';
 import Loading from '../components/messages/Loading'
-import matchTheIcon from '../services/Functions'
+// import matchTheIcon from '../services/Functions'
+import matchTheUrl from '../services/Functions';
 import '../styles/pages/servants.sass';
 
 function Servants() {
@@ -60,7 +61,7 @@ function Servants() {
                     </td>
                     <td className='name'>{name}</td>
                     <td className='class'>
-                      <img className='image' src={matchTheIcon(className)} alt={className} />
+                      <img className='image' src={matchTheUrl(className)} alt={className} />
                     </td>
                     <td>{rarity}</td>
                   </tr>
