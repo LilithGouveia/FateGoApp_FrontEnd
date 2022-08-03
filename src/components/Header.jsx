@@ -1,9 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/components/header.sass';
 import mash from '../assets/FGO_icon.webp'
-import gem from '../assets/gem.png'
 
 function Header() {
+  const navigate = useNavigate();
   return (
     <header className='headContainer'>
       <div className='headers'>
@@ -16,12 +17,18 @@ function Header() {
       </div>
       <div className='menu'>
         <button className='headButton'>Tier List</button>
-        <button className='headButton'>Servants</button>
+        <button
+          className='headButton'
+          type='button'
+          onClick={() => navigate(`/servants`)}
+        >
+          Servants
+        </button>
         <button className='headButton'>Banners</button>
       </div>
       <form action='/' method='GET' className='form'>
         <input type='search' placeholder='Search' className='search-field' />
-        <button type='submit' class='search-button'>
+        <button type='submit' className='search-button'>
           <img
             src='https://cdn.icon-icons.com/icons2/1111/PNG/512/loupe_79257.png'
             alt='magnifier'

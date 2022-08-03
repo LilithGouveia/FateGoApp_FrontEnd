@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 import context from './context';
 
 function Provider({ children }) {
-  const [inputName, setInputName] = useState('');
+  const [data, setData] = useState([]);
   const [inputBanner, setInputBanner] = useState('');
+  const [loading, setLoading] = useState(true);
+
 
   // o input encontrará informações sobre personagens e sobre o banner.
   //tier list
@@ -13,10 +15,12 @@ function Provider({ children }) {
   //lore?
 
   const value = {
-    inputName,
-    setInputName,
+    data,
+    setData,
     inputBanner,
     setInputBanner,
+    loading,
+    setLoading,
   };
 
   return (

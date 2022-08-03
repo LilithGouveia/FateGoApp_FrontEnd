@@ -1,17 +1,18 @@
-import React from "react";
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Provider from './components/contexts/provider';
-import MainContent from "./components/MainContent";
-// import Loading from "./components/messages/Loading";
-// import NotFound from "./components/messages/NotFound";
+import Provider from './contexts/provider';
+import MainContent from './components/MainContent';
+import Servants from './pages/Servants';
+
 function App() {
   return (
     <Provider>
       <Routes>
-          <Route exact path="/" element={ <MainContent/> } />
+        <Route exact path='/' element={<MainContent />} />
+        <Route exact path='/servants' element={<Servants />} />
       </Routes>
     </Provider>
   );
 }
 
-export default App
+export default App;
