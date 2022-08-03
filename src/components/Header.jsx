@@ -8,7 +8,12 @@ function Header() {
   return (
     <header className='headContainer'>
       <div className='headers'>
-        <img src={mash} alt='girl with gray hair logo' className='headImage' />
+        <img
+          src={mash}
+          alt='girl with gray hair logo'
+          className='headImage'
+          onClick={() => navigate(`/`)}
+        />
         <img
           src='https://anime.fate-go.us/ep7-tv/tv/assets/img/logo.png'
           alt='logo of fate grand order'

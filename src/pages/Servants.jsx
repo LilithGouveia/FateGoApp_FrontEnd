@@ -1,12 +1,12 @@
 import React, { useEffect, useContext } from 'react';
 import { fetchAllServants } from '../services/Apis';
 import { useNavigate } from 'react-router-dom';
+import { GiBarbedStar } from 'react-icons/gi';
 import context from '../contexts/context';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Notfound from '../components/messages/NotFound';
 import Loading from '../components/messages/Loading'
-// import matchTheIcon from '../services/Functions'
 import matchTheUrl from '../services/Functions';
 import '../styles/pages/servants.sass';
 
@@ -40,33 +40,38 @@ function Servants() {
           <table>
             <thead>
               <tr>
-                <th>
-                  <label>Number</label>
+                <th className='number'>
+                  <label>#Id</label>
                 </th>
-                <th>
+                <th className='servantsA'>
                   <label>Servant</label>
                 </th>
-                <th>
+                <th className='rarity'>
                   <label>Rarity</label>
                 </th>
               </tr>
             </thead>
             <tbody>
-              {data.map(
-                ({ id, name, collectionNo, rarity, face, className }) => (
-                  <tr onClick={() => navigate(`/servants/${id}`)} key={id}>
-                    <td className='number'>{collectionNo}</td>
+              {data
+                .map(
+                  ({ id, name, collectionNo, rarity, face, className }) => (
+                    <tr onClick={() => navigate(`/servants/${id}`)} key={id}>
+                    <td className='id'>{collectionNo}</td>
+                    <td className='container'>
+                      <img className='imageProfile' src={face} alt={name} />
+                      {name}
+                      <img
+                        className='image'
+                        src={matchTheUrl(className)}
+                        alt={className}
+                        />
+                    </td>
                     <td>
-                      <img className='image' src={face} alt={name} />
+                      {rarity} {<GiBarbedStar className='icon'/>}
                     </td>
-                    <td className='name'>{name}</td>
-                    <td className='class'>
-                      <img className='image' src={matchTheUrl(className)} alt={className} />
-                    </td>
-                    <td>{rarity}</td>
                   </tr>
                 )
-              )}
+                )}
             </tbody>
           </table>
         </div>
