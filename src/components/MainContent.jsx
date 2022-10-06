@@ -8,7 +8,7 @@ function MainContent() {
     <div className='mainContent'>
       <Header />
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

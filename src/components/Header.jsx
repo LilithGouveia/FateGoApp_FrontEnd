@@ -35,7 +35,7 @@ function Header() {
         <input type='search' placeholder='Search' className='search-field' />
         <button type='submit' className='search-button'>
           <img
-            src='https://cdn.icon-icons.com/icons2/1111/PNG/512/loupe_79257.png'
+            src='https://cdn-icons-png.flaticon.com/512/68/68213.png'
             alt='magnifier'
             className='sea'
           />
