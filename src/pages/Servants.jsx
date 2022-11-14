@@ -1,16 +1,15 @@
 import React, { useEffect, useContext } from 'react';
 import { fetchAllServants } from '../services/Apis';
 import { useNavigate } from 'react-router-dom';
-import { GiBarbedStar } from 'react-icons/gi';
 import context from '../contexts/context';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Notfound from '../components/messages/NotFound';
 import Loading from '../components/messages/Loading'
-import matchTheUrl from '../services/Functions';
-import SearchBar from '../components/SearchBar';
 import FilterByClass from '../components/FilterbyClass';
+import ServantCards from '../components/ServantCards';
 import '../styles/pages/servants.sass';
+
 
 function Servants() {
   const contexts = useContext(context);
@@ -34,7 +33,6 @@ function Servants() {
     <div className='servants'>
       <Header />
       <FilterByClass />
-
       {loading === true ? <Loading /> : null}
       {data === null ? (
         <Notfound />
@@ -54,27 +52,7 @@ function Servants() {
                 </th>
               </tr>
             </thead>
-            <tbody>
-              {data.map(
-                ({ id, name, collectionNo, rarity, face, className }) => (
-                  <tr onClick={() => navigate(`/servants/${id}`)} key={id}>
-                    <td className='id'>{collectionNo}</td>
-                    <td className='container'>
-                      <img className='imageProfile' src={face} alt={name} />
-                      {name}
-                      <img
-                        className='image'
-                        src={matchTheUrl(className)}
-                        alt={className}
-                      />
-                    </td>
-                    <td>
-                      {rarity} {<GiBarbedStar className='icon' />}
-                    </td>
-                  </tr>
-                )
-              )}
-            </tbody>
+            <ServantCards />
           </table>
         </div>
       )}

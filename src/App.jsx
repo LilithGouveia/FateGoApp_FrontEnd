@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Provider from './contexts/provider';
-import MainContent from './components/MainContent';
+import MainContent from './pages/MainContent';
 import Servants from './pages/Servants';
 
 function App() {
