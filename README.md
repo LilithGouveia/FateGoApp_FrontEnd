@@ -5,7 +5,6 @@ Application under development, currently working on the Servants page.
 
 * Features in development:
 
-  * `Search bar`
   * `Pagination`
   * `Filter by class`
 

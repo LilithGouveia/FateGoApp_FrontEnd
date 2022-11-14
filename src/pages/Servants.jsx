@@ -14,14 +14,15 @@ import '../styles/pages/servants.sass';
 function Servants() {
   const contexts = useContext(context);
   const navigate = useNavigate();
-  const { data, setData, loading, setLoading } = contexts;
+  const { data, setData, loading, setLoading, setFilteredResults, } = contexts;
 
   useEffect(() => {
     try {
       const initialFetch = async () => {
         const result = await fetchAllServants();
         setData(result);
-        setLoading(false)
+        setLoading(false);
+        setFilteredResults(result);
       };
       initialFetch();
     } catch (erro) {

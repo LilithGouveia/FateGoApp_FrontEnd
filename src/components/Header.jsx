@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import SearchBar from './SearchBar';
 import '../styles/components/header.sass';
 import mash from '../assets/FGO_icon.webp'
 
@@ -31,7 +32,7 @@ function Header() {
         </button>
         <button className='headButton'>Banners</button>
       </div>
-      <form action='/' method='GET' className='form'>
+      {/* <form action='/' method='GET' className='form'>
         <input type='search' placeholder='Search' className='search-field' />
         <button type='submit' className='search-button'>
           <img
@@ -40,7 +41,8 @@ function Header() {
             className='sea'
           />
         </button>
-      </form>
+      </form> */}
+      <SearchBar />
     </header>
   );
 }

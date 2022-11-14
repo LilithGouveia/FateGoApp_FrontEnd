@@ -8,7 +8,7 @@ import '../styles/pages/servants.sass';
 function ServantCards() {
   const contexts = useContext(context);
   const navigate = useNavigate();
-  const { data } = contexts;
+  const { filteredResults } = contexts;
   return (
     <div className='servantsContainer'>
       <table>
@@ -26,7 +26,7 @@ function ServantCards() {
           </tr>
         </thead>
         <tbody>
-          {data.map(({ id, name, collectionNo, rarity, face, className }) => (
+          {filteredResults.map(({ id, name, collectionNo, rarity, face, className }) => (
             <tr onClick={() => navigate(`/servants/${id}`)} key={id}>
               <td className='id'>{collectionNo}</td>
               <td className='container'>
