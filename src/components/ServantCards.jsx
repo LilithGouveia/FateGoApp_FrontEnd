@@ -10,25 +10,42 @@ function ServantCards() {
   const navigate = useNavigate();
   const { data } = contexts;
   return (
-    <tbody>
-      {data.map(({ id, name, collectionNo, rarity, face, className }) => (
-        <tr onClick={() => navigate(`/servants/${id}`)} key={id}>
-          <td className='id'>{collectionNo}</td>
-          <td className='container'>
-            <img className='imageProfile' src={face} alt={name} />
-            {name}
-            <img
-              className='image'
-              src={matchTheUrl(className)}
-              alt={className}
-            />
-          </td>
-          <td>
-            {rarity} {<GiBarbedStar className='icon' />}
-          </td>
-        </tr>
-      ))}
-    </tbody>
+    <div className='servantsContainer'>
+      <table>
+        <thead>
+          <tr>
+            <th className='number'>
+              <label>#Id</label>
+            </th>
+            <th className='servantsA'>
+              <label>Servant</label>
+            </th>
+            <th className='rarity'>
+              <label>Rarity</label>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map(({ id, name, collectionNo, rarity, face, className }) => (
+            <tr onClick={() => navigate(`/servants/${id}`)} key={id}>
+              <td className='id'>{collectionNo}</td>
+              <td className='container'>
+                <img className='imageProfile' src={face} alt={name} />
+                {name}
+                <img
+                  className='image'
+                  src={matchTheUrl(className)}
+                  alt={className}
+                />
+              </td>
+              <td>
+                {rarity} {<GiBarbedStar className='icon' />}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 

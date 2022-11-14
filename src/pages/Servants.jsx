@@ -37,24 +37,7 @@ function Servants() {
       {data === null ? (
         <Notfound />
       ) : (
-        <div className='servantsContainer'>
-          <table>
-            <thead>
-              <tr>
-                <th className='number'>
-                  <label>#Id</label>
-                </th>
-                <th className='servantsA'>
-                  <label>Servant</label>
-                </th>
-                <th className='rarity'>
-                  <label>Rarity</label>
-                </th>
-              </tr>
-            </thead>
-            <ServantCards />
-          </table>
-        </div>
+        <ServantCards />
       )}
       <Footer />
     </div>
