@@ -12,7 +12,7 @@ Application under development, currently working on the Servants page.
 
 ## Welcome to FateGoApp!
 
-This is an app made with React(Redux) and styled with SCSS, with responsive design and thought to the principles of Mobile first.
+This is an app made with React(Redux) and styled with SCSS, with responsive design.
 
 BackEnd is powered by the amazing AtlasAcademy API
 
@@ -39,7 +39,7 @@ BackEnd is powered by the amazing AtlasAcademy API
 
 ## Pages
 
-the application will consist of 4 pages, properly componentized
+the application consists of 4 pages, properly componentized.
 
 ### Main
 

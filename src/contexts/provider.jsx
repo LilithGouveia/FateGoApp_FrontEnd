@@ -7,6 +7,7 @@ function Provider({ children }) {
   const [data, setData] = useState([]);
   const [inputBanner, setInputBanner] = useState('');
   const [loading, setLoading] = useState(true);
+  const [searchInput, setSearchInput] = useState('');
 
 
   // o input encontrará informações sobre personagens e sobre o banner.
@@ -21,6 +22,8 @@ function Provider({ children }) {
     setInputBanner,
     loading,
     setLoading,
+    searchInput,
+    setSearchInput,
   };
 
   return (
