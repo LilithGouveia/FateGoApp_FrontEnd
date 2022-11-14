@@ -1,5 +1,15 @@
 # FateGoApp_FrontEnd
 
+
+Application under development, currently working on the Servants page.
+
+* Features in development:
+
+  * `Search bar`
+  * `Pagination`
+  * `Filter by class`
+
+
 ## Welcome to FateGoApp!
 
 This is an app made with React(Redux) and styled with SCSS, with responsive design and thought to the principles of Mobile first.
@@ -55,5 +65,5 @@ The Tier List page will feature the position of servants, according to player us
 
 The [AtlasAcademy](https://api.atlasacademy.io/rapidoc) is an API Endpoint for serving FGO related data. Data is maintained and automatically updated within an hour of a new version of the game. 
 
-
+  
 
