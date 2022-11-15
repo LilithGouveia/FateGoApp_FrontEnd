@@ -27,7 +27,8 @@ function ServantCards() {
         </thead>
         <tbody>
           {filteredResults.map(({ id, name, collectionNo, rarity, face, className }) => (
-            <tr onClick={() => navigate(`/servants/${id}`)} key={id}>
+            <tr onClick={() => 
+              navigate(`/servants/${id}`)} key={id}>
               <td className='id'>{collectionNo}</td>
               <td className='container'>
                 <img className='imageProfile' src={face} alt={name} />

@@ -32,16 +32,6 @@ function Header() {
         </button>
         <button className='headButton'>Banners</button>
       </div>
-      {/* <form action='/' method='GET' className='form'>
-        <input type='search' placeholder='Search' className='search-field' />
-        <button type='submit' className='search-button'>
-          <img
-            src='https://cdn-icons-png.flaticon.com/512/68/68213.png'
-            alt='magnifier'
-            className='sea'
-          />
-        </button>
-      </form> */}
       <SearchBar />
     </header>
   );

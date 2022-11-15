@@ -9,6 +9,7 @@ function Provider({ children }) {
   const [loading, setLoading] = useState(true);
   const [searchInput, setSearchInput] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
+  const [idInfo, setIdInfo] = useState([]);
 
 
   // o input encontrará informações sobre personagens e sobre o banner.
@@ -27,6 +28,8 @@ function Provider({ children }) {
     setSearchInput,
     filteredResults,
     setFilteredResults,
+    idInfo,
+    setIdInfo,
   };
 
   return (
