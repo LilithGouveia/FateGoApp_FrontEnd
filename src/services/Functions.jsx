@@ -1,4 +1,6 @@
-const matchTheUrl = (name) =>
+
+
+export const matchTheUrl = (name) =>
   ({
     alterEgo:
       'https://static.wikia.nocookie.net/fategrandorder/images/9/99/Class-Alterego-Gold.png',
@@ -30,30 +32,48 @@ const matchTheUrl = (name) =>
       'https://static.wikia.nocookie.net/fategrandorder/images/b/b4/Class-Saber-Gold.png',
     shielder:
       'https://static.wikia.nocookie.net/fategrandorder/images/a/ab/Class-Shielder-Gold.png',
-  } [name]);
+  }[name]);
 
 const servantsButton = (param) => {
   return <img className='images' src={matchTheUrl(param)} alt={param} />;
 };
 
-const render = (param1, param2) =>{
+const render = (param1, param2) => {
   return (
-    <div className={ param2 }>
+    <div className={param2}>
       {param1.map((servant) => servantsButton(servant))}
     </div>
   );
-}
+};
 
+export const servantsOne = [
+  'saber',
+  'archer',
+  'lancer',
+  'assassin',
+  'caster',
+  'berserker',
+  'rider',
+  'avenger',
+];
+export const servantsTwo = [
+  'ruler',
+  'moonCancer',
+  'pretender',
+  'shielder',
+  'foreigner',
+  'alterEgo',
+  'beast',
+];
 const makeTheButtons = () => {
-  const servantsOne = ['saber','archer', 'lancer', 'assassin', 'caster', 'berserker', 'rider', 'avenger'];
-  const servantsTwo = ['ruler', 'moonCancer', 'pretender', 'shielder', 'foreigner', 'alterEgo', 'beast'];
   return (
     <div className='filterClass'>
       <p> Filter by Class </p>
-      { render(servantsOne, 'searchClass1') };
-      { render(servantsTwo, 'searchClass2') };
+      {render(servantsOne, 'searchClass1')};
+      {render(servantsTwo, 'searchClass2')};
     </div>
   );
-}
+};
 
-export default matchTheUrl;
+
+

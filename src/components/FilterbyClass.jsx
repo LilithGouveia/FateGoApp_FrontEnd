@@ -1,45 +1,41 @@
-import matchTheUrl from '../services/Functions';
+import React, { useContext } from 'react';
+import { matchTheUrl, servantsOne, servantsTwo } from '../services/Functions';
+import context from '../contexts/context';
 import '../styles/pages/servants.sass';
 
 function FilterByClass() {
-
+  const searchItem = (classValue) => {
+    const filteredData = data.filter((item) => {
+      return Object.values(item)
+      .join('')
+      .toLowerCase()
+      .includes(classValue.toLowerCase());
+    });
+    setFilteredResults(filteredData);
+  };
+  const classes = (array) => {
+    {
+      return array.map((arrayItem) => (
+        <img
+          className='images'
+          src={matchTheUrl(arrayItem)}
+          alt={arrayItem}
+          key={arrayItem}
+          onClick={() => searchItem(arrayItem)}
+        />
+      ));
+    }
+  };
+   const contexts = useContext(context);
+   const { data, setFilteredResults } = contexts;
   return (
     <div className='filterClass'>
       <p> Filter by Class </p>
       <div className='searchClass'>
-        <img className='images' src={matchTheUrl('saber')} alt='saber' />
-        <img className='images' src={matchTheUrl('archer')} alt='archer' />
-        <img className='images' src={matchTheUrl('lancer')} alt='lancer' />
-        <img className='images' src={matchTheUrl('assassin')} alt='assassin' />
-        <img className='images' src={matchTheUrl('caster')} alt='caster' />
-        <img
-          className='images'
-          src={matchTheUrl('berserker')}
-          alt='berserker'
-        />
-        <img className='images' src={matchTheUrl('rider')} alt='rider' />
-        <img className='images' src={matchTheUrl('avenger')} alt='avenger' />
+        {classes(servantsOne)}
       </div>
       <div className='searchClass2'>
-        <img className='images' src={matchTheUrl('ruler')} alt='ruler' />
-        <img
-          className='images'
-          src={matchTheUrl('moonCancer')}
-          alt='moonCancer'
-        />
-        <img
-          className='images'
-          src={matchTheUrl('pretender')}
-          alt='pretender'
-        />
-        <img className='images' src={matchTheUrl('shielder')} alt='shielder' />
-        <img
-          className='images'
-          src={matchTheUrl('foreigner')}
-          alt='foreigner'
-        />
-        <img className='images' src={matchTheUrl('alterEgo')} alt='alterEgo' />
-        <img className='images' src={matchTheUrl('beast')} alt='beast' />
+        {classes(servantsTwo)}
       </div>
     </div>
   );

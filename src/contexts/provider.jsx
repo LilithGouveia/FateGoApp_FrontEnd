@@ -10,12 +10,7 @@ function Provider({ children }) {
   const [searchInput, setSearchInput] = useState('');
   const [filteredResults, setFilteredResults] = useState([]);
   const [idInfo, setIdInfo] = useState([]);
-
-
-  // o input encontrará informações sobre personagens e sobre o banner.
-  //tier list
-  // banners
-  //lore?
+  const [currentPage, setCurrentPage] = useState([]);
 
   const value = {
     data,
@@ -30,6 +25,8 @@ function Provider({ children }) {
     setFilteredResults,
     idInfo,
     setIdInfo,
+    currentPage,
+    setCurrentPage
   };
 
   return (

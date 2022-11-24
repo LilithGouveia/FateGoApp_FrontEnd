@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { GiBarbedStar } from 'react-icons/gi';
 import context from '../contexts/context';
-import matchTheUrl from '../services/Functions';
+import { matchTheUrl } from '../services/Functions';
 import '../styles/pages/servants.sass';
 
 function ServantCards() {
