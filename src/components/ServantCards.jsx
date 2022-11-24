@@ -8,7 +8,9 @@ import '../styles/pages/servants.sass';
 function ServantCards() {
   const contexts = useContext(context);
   const navigate = useNavigate();
-  const { filteredResults } = contexts;
+  const { filteredResults, currentPage } = contexts;
+    const numberOfItens = 30;
+    const offset = currentPage * numberOfItens;
   return (
     <div className='servantsContainer'>
       <table>
@@ -26,24 +28,25 @@ function ServantCards() {
           </tr>
         </thead>
         <tbody>
-          {filteredResults.map(({ id, name, collectionNo, rarity, face, className }) => (
-            <tr onClick={() => 
-              navigate(`/servants/${id}`)} key={id}>
-              <td className='id'>{collectionNo}</td>
-              <td className='container'>
-                <img className='imageProfile' src={face} alt={name} />
-                {name}
-                <img
-                  className='image'
-                  src={matchTheUrl(className)}
-                  alt={className}
-                />
-              </td>
-              <td>
-                {rarity} {<GiBarbedStar className='icon' />}
-              </td>
-            </tr>
-          ))}
+          {filteredResults
+            .slice(offset, offset + numberOfItens)
+            .map(({ id, name, collectionNo, rarity, face, className }) => (
+              <tr onClick={() => navigate(`/servants/${id}`)} key={id}>
+                <td className='id'>{collectionNo}</td>
+                <td className='container'>
+                  <img className='imageProfile' src={face} alt={name} />
+                  {name}
+                  <img
+                    className='image'
+                    src={matchTheUrl(className)}
+                    alt={className}
+                  />
+                </td>
+                <td>
+                  {rarity} {<GiBarbedStar className='icon' />}
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>

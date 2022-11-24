@@ -8,6 +8,7 @@ import Notfound from '../components/messages/NotFound';
 import Loading from '../components/messages/Loading'
 import FilterByClass from '../components/FilterbyClass';
 import ServantCards from '../components/ServantCards';
+import Pagination from '../components/Pagination';
 import '../styles/pages/servants.sass';
 
 
@@ -40,6 +41,7 @@ function Servants() {
       ) : (
         <ServantCards />
       )}
+      <Pagination />
       <Footer />
     </div>
   );
